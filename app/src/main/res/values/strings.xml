@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Geo Quiz</string>
+    <string name="online_and_offline_quizzes">Online And Offline quizzes</string>
+    <string name="quiz_app">Quizzes</string>
+    <string name="next">Next</string>
+    <string name="finish">Finish</string>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="uz.gita.quizapp.presentation.screens.MainScreen"
+        android:label="MainScreen" >
+        <action
+            android:id="@+id/action_mainScreen_to_quizScreen"
+            app:destination="@id/quizScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizScreen"
+        android:name="uz.gita.quizapp.presentation.screens.QuizScreen"
+        android:label="screen_quiz"
+        tools:layout="@layout/screen_quiz" >
+        <action
+            android:id="@+id/action_quizScreen_to_resultScreen"
+            app:destination="@id/resultScreen"
+            app:popUpTo="@id/mainScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultScreen"
+        android:name="uz.gita.quizapp.presentation.screens.QuizResultScreen"
+        android:label="ResultScreen" />
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="uz.gita.quizapp.presentation.screens.SplashScreen"
+        android:label="SplashScreen" >
+        <action
+            android:id="@+id/action_splashScreen_to_mainScreen"
+            app:destination="@id/mainScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
